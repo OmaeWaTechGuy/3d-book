@@ -10,7 +10,6 @@ body {
   margin: 0;
 }
 #flip {
-  animation: wrapper 6s ease-in-out infinite;
   height: 350px;
   width: 253px;
   position: absolute;
@@ -20,6 +19,11 @@ body {
   transform-style: preserve-3d;
   transform-origin: 0 0 0;
 }
+
+.flip--hover {
+  animation: wrapper 6s ease-in-out infinite;
+}
+
 @keyframes wrapper {
   50% {
     transform: translateZ(-10px) rotateX(60deg) rotateZ(29deg) rotateY(-180deg);
@@ -59,8 +63,12 @@ body {
 }
 #flip div > div {
   background-position-x: -23px;
+}
+
+.flip__div__div--hover {
   animation: page 6s ease-in-out infinite;
 }
+
 #flip div > div > div {
   background-position-x: -46px;
 }
@@ -127,7 +135,6 @@ body {
   }
 }
 #book #top {
-  animation: book 6s ease-in-out infinite;
   background: url("/images/page2.jpg");
   background-size: 100% 100%;
   background-position: 100%;
@@ -138,6 +145,11 @@ body {
   left: 0;
   top: 0;
 }
+
+.book__top--hover {
+  animation: book 6s ease-in-out infinite;
+}
+
 #book #bottom {
   background: #e7ded1;
   box-shadow: rgba(83, 53, 13, 0.2) 4px 2px 1px, #35582c 1px 1px 0px 0px;
@@ -149,7 +161,6 @@ body {
   top: 0;
 }
 #book #shadow {
-  animation: shadow 6s ease-in-out infinite;
   box-shadow: inset rgba(83, 53, 13, 0) -200px 0 150px -140px;
   height: 350px;
   width: 248px;
@@ -158,6 +169,11 @@ body {
   top: 0;
   transform: translateZ(-40px);
 }
+
+.book__shadow--hover {
+  animation: shadow 6s ease-in-out infinite;
+}
+
 @keyframes shadow {
   20% {
     box-shadow: inset rgba(83, 53, 13, 0) -200px 0 150px -140px;
