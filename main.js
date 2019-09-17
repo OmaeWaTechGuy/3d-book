@@ -23,4 +23,18 @@ root.addEventListener("click", function(e) {
   }
 });
 
-var url = "https://www.oreilly.co.jp/books/images/picture978-4-87311-886-4.gif";
+var url_cover = document.querySelector("#url_cover");
+url_cover.addEventListener("change", function(event) {
+  var urlValue = event.target.value;
+  var imageValue = 'url("/images/cover.jpg")';
+  if (urlValue.match(/\.(jpg|jpeg|png|gif)$/i)) {
+    imageValue = "url(" + urlValue + ")";
+  } else {
+    console.log("Invalid url.");
+  }
+  document.querySelector("#flip #front").style.backgroundImage = imageValue;
+  var divList = document.querySelectorAll("#flip #front div");
+  divList.forEach(element => {
+    element.style.backgroundImage = imageValue;
+  });
+});
