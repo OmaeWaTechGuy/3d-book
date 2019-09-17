@@ -23,14 +23,16 @@ root.addEventListener("click", function(e) {
   }
 });
 
+var err_msg = document.querySelector("#err_msg");
 var url_cover = document.querySelector("#url_cover");
 url_cover.addEventListener("change", function(event) {
-  var urlValue = event.target.value;
-  var imageValue = 'url("/images/cover.jpg")';
+  var urlValue = event.target.value.trim();
+  var imageValue = 'url("./images/cover.jpg")';
   if (urlValue.match(/\.(jpg|jpeg|png|gif)$/i)) {
     imageValue = "url(" + urlValue + ")";
+    err_msg.innerHTML = "";
   } else {
-    console.log("Invalid url.");
+    err_msg.innerHTML = "Invalid url.";
   }
   document.querySelector("#flip #front").style.backgroundImage = imageValue;
   var divList = document.querySelectorAll("#flip #front div");
