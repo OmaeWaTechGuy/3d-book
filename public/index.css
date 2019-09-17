@@ -47,7 +47,7 @@ input[type="url"] {
 }
 #flip #front,
 #flip #front div {
-  background-image: url("/images/cover.jpg");
+  background-image: url("./images/cover.jpg");
   box-shadow: inset rgba(255, 255, 255, 0.3) 0px -1px 0 0,
     #35582c 0px 1px 0px 0px;
 }
@@ -61,7 +61,7 @@ input[type="url"] {
 } /* avoid pages overlap */
 #flip #back,
 #flip #back div {
-  background-image: url("/images/page1.jpg");
+  background-image: url("./images/page1.jpg");
 }
 
 #flip > div {
@@ -142,7 +142,7 @@ input[type="url"] {
   }
 }
 #book #top {
-  background-image: url("/images/page2.jpg");
+  background-image: url("./images/page2.jpg");
   background-size: 100% 100%;
   background-position: 100%;
   box-shadow: inset rgba(0, 0, 0, 0.2) 510px 0 50px -140px;
