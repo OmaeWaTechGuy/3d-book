@@ -28,7 +28,7 @@ var url_cover = document.querySelector("#url_cover");
 url_cover.addEventListener("change", function(event) {
   var urlValue = event.target.value.trim();
   var imageValue = 'url("./images/cover.jpg")';
-  if (urlValue.match(/\.(jpg|jpeg|png|gif)$/i)) {
+  if (urlValue.match(/^(http|https|data):\/\//i)) {// /\.(jpg|jpeg|png|gif)$/i
     imageValue = "url(" + urlValue + ")";
     err_msg.innerHTML = "";
   } else {
