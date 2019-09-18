@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
   height: 100%;
@@ -6,8 +11,6 @@ body {
 body {
   background: radial-gradient(#e4cea6, #9c8763);
   perspective: 900px;
-  margin: 0;
-  padding: 0;
 }
 
 #form {
@@ -15,14 +18,14 @@ body {
   flex-direction: column;
   margin: 10px;
   font-size: 0.8rem;
+  width: 80%;
 }
 
-#err_msg{
+#err_msg {
   color: red;
 }
 
 input[type="url"] {
-  width: 95%;
   font-size: 0.8rem;
 }
 
